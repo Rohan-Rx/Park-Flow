@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ParkFlow | Register</title>
+    <link rel="stylesheet" href="css/style2.css">
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =================================
+         LEFT PANEL
+    ================================== -->
+
+    <section class="left-panel">
+
+
+        <!-- Logo -->
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                P
+            </div>
+
+
+            <h1>
+                Park<span>Flow</span>
+            </h1>
+
+
+            <span class="logo-subtitle">
+                    Smart Parking Management System
+                </span>
+
+        </div>
+
+
+        <!-- Hero -->
+
+        <h2 class="hero-title">
+
+            Park Smarter,<br>
+
+            <span>
+                    Travel Better.
+                </span>
+
+        </h2>
+
+
+        <div class="blue-line"></div>
+
+
+        <p class="hero-description">
+
+            Find, reserve, and manage parking spaces
+            in real-time with ease.
+
+        </p>
+
+
+        <!-- Features -->
+
+        <div class="features">
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    P
+                </div>
+
+                <div>
+
+                    <h3>
+                        Real-time Slot Availability
+                    </h3>
+
+                    <p>
+                        Check live parking slot status
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ▣
+                </div>
+
+                <div>
+
+                    <h3>
+                        Easy Reservations
+                    </h3>
+
+                    <p>
+                        Book your slot in advance
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ◇
+                </div>
+
+                <div>
+
+                    <h3>
+                        Secure & Reliable
+                    </h3>
+
+                    <p>
+                        Your vehicle is in safe hands
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ₹
+                </div>
+
+                <div>
+
+                    <h3>
+                        Cashless Payments
+                    </h3>
+
+                    <p>
+                        Hassle-free digital payments
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Parking illustration -->
+
+        <div class="parking-area">
+
+
+            <div class="parking-sign">
+                P
+            </div>
+
+
+            <div class="parking-line"></div>
+
+
+            <div class="car">
+
+                <div class="car-window"></div>
+
+                <div class="car-window right"></div>
+
+                <div class="wheel left"></div>
+
+                <div class="wheel right"></div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================
+         RIGHT PANEL
+    ================================== -->
+
+    <section class="right-panel">
+
+
+        <div class="register-card">
+
+
+            <!-- Header -->
+
+            <div class="auth-header">
+
+
+                <div class="auth-icon">
+                    +
+                </div>
+
+
+                <h2>
+                    Create Account
+                </h2>
+
+
+                <p>
+                    Register to get started
+                </p>
+
+
+            </div>
+
+
+
+            <!-- Registration Form -->
+
+            <form
+                    action="RegisterServlet"
+                    method="post"
+                    id="registerForm"
+            >
+
+
+                <!-- Full Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+
+                    <div class="input-box">
+
+                            <span class="input-icon">
+                                ♙
+                            </span>
+
+
+                        <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+
+                    <div class="input-box">
+
+                            <span class="input-icon">
+                                ✉
+                            </span>
+
+
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Phone -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+
+                    <div class="input-box">
+
+                            <span class="input-icon">
+                                ☎
+                            </span>
+
+
+                        <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel"
+                                pattern="[0-9]{10}"
+                                maxlength="10"
+                                required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+
+                    <div class="input-box">
+
+                            <span class="input-icon">
+                                🔒
+                            </span>
+
+
+                        <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="6"
+                                required
+                        >
+
+
+                        <button
+                                type="button"
+                                class="password-toggle"
+                                onclick="togglePassword('password', this)"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Confirm Password -->
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+
+                    <div class="input-box">
+
+                            <span class="input-icon">
+                                🔒
+                            </span>
+
+
+                        <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                minlength="6"
+                                required
+                        >
+
+
+                        <button
+                                type="button"
+                                class="password-toggle"
+                                onclick="togglePassword(
+                                    'confirmPassword',
+                                    this
+                                )"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Terms -->
+
+                <label class="terms">
+
+
+                    <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            required
+                    >
+
+
+                    <span>
+
+                            I agree to the
+
+                            <a
+                                    href="#"
+                                    class="link"
+                            >
+                                Terms & Conditions
+                            </a>
+
+                            and
+
+                            <a
+                                    href="#"
+                                    class="link"
+                            >
+                                Privacy Policy
+                            </a>
+
+                        </span>
+
+
+                </label>
+
+
+
+                <!-- Register Button -->
+
+                <button
+                        type="submit"
+                        class="register-btn"
+                >
+
+                    + &nbsp; Register
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- Login Link -->
+
+            <div class="bottom-text">
+
+                Already have an account?
+
+                <a
+                        href="login.html"
+                        class="link"
+                >
+                    Login here
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+
+
+<!-- =================================
+     JAVASCRIPT
+================================== -->
+
+<script>
+
+
+    /*
+     * Show / Hide Password
+     */
+
+    function togglePassword(
+        inputId,
+        button
+    ) {
+
+        const input =
+            document.getElementById(
+                inputId
+            );
+
+
+        if (
+            input.type === "password"
+        ) {
+
+            input.type = "text";
+
+            button.textContent = "◉";
+
+        } else {
+
+            input.type = "password";
+
+            button.textContent = "◉";
+
+        }
+
+    }
+
+
+
+    /*
+     * Password Validation
+     */
+
+    document
+        .getElementById("registerForm")
+        .addEventListener(
+            "submit",
+            function(event) {
+
+                const password =
+                    document.getElementById(
+                        "password"
+                    ).value;
+
+
+                const confirmPassword =
+                    document.getElementById(
+                        "confirmPassword"
+                    ).value;
+
+
+                if (
+                    password !==
+                    confirmPassword
+                ) {
+
+                    event.preventDefault();
+
+                    alert(
+                        "Passwords do not match!"
+                    );
+
+                    return;
+
+                }
+
+            }
+        );
+
+</script>
+
+
+</body>
+
+</html>

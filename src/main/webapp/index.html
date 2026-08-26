@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkFlow | Login</title>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =========================
+         LEFT BRANDING PANEL
+    ========================== -->
+
+    <section class="left-panel">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                P
+            </div>
+
+            <h1>
+                Park<span>Flow</span>
+            </h1>
+
+            <span class="logo-subtitle">
+                    Smart Parking Management System
+                </span>
+
+        </div>
+
+
+        <h2 class="hero-title">
+
+            Park Smarter,<br>
+
+            <span>
+                    Travel Better.
+                </span>
+
+        </h2>
+
+
+        <div class="blue-line"></div>
+
+
+        <p class="hero-description">
+
+            Find, reserve, and manage parking spaces
+            in real-time with ease.
+
+        </p>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    P
+                </div>
+
+                <div>
+                    <h3>
+                        Real-time Slot Availability
+                    </h3>
+
+                    <p>
+                        Check live parking slot status
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ▣
+                </div>
+
+                <div>
+                    <h3>
+                        Easy Reservations
+                    </h3>
+
+                    <p>
+                        Book your slot in advance
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ◇
+                </div>
+
+                <div>
+                    <h3>
+                        Secure & Reliable
+                    </h3>
+
+                    <p>
+                        Your vehicle is in safe hands
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ₹
+                </div>
+
+                <div>
+                    <h3>
+                        Cashless Payments
+                    </h3>
+
+                    <p>
+                        Hassle-free digital payments
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Parking illustration -->
+
+        <div class="parking-area">
+
+            <div class="parking-sign">
+                P
+            </div>
+
+            <div class="parking-line"></div>
+
+
+            <div class="car">
+
+                <div class="car-window"></div>
+
+                <div class="car-window right"></div>
+
+                <div class="wheel left"></div>
+
+                <div class="wheel right"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOGIN PANEL
+    ========================== -->
+
+    <section class="right-panel">
+
+        <div class="login-card">
+
+            <div class="auth-header">
+
+                <div class="auth-icon">
+                    →
+                </div>
+
+                <h2>
+                    Welcome Back!
+                </h2>
+
+                <p>
+                    Login to access your account
+                </p>
+
+            </div>
+
+
+            <!-- Login Form -->
+
+            <form
+                    action="LoginServlet"
+                    method="post"
+                    id="loginForm"
+            >
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-box">
+
+                            <span class="input-icon">
+                                ✉
+                            </span>
+
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                            <span class="input-icon">
+                                🔒
+                            </span>
+
+                        <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                        >
+
+                        <button
+                                type="button"
+                                class="password-toggle"
+                                onclick="togglePassword()"
+                                aria-label="Show password"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Remember / Forgot -->
+
+                <div class="form-options">
+
+                    <label class="remember">
+
+                        <input
+                                type="checkbox"
+                                name="remember"
+                        >
+
+                        <span>
+                                Remember me
+                            </span>
+
+                    </label>
+
+
+                    <a
+                            href="#"
+                            class="link"
+                    >
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login -->
+
+                <button
+                        type="submit"
+                        class="login-btn"
+                >
+                    → &nbsp; Login
+                </button>
+
+            </form>
+
+
+            <!-- Divider -->
+
+            <div class="divider">
+
+                    <span>
+                        or continue with
+                    </span>
+
+            </div>
+
+
+            <!-- Social login -->
+
+            <div class="social-buttons">
+
+                <button
+                        type="button"
+                        class="social-btn"
+                >
+                    🔴 &nbsp; Google
+                </button>
+
+
+                <button
+                        type="button"
+                        class="social-btn"
+                >
+                    🔵 &nbsp; Facebook
+                </button>
+
+            </div>
+
+
+            <!-- Register -->
+
+            <div class="bottom-text">
+
+                Don't have an account?
+
+                <a
+                        href="register.html"
+                        class="link"
+                >
+                    Register here
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+    function togglePassword() {
+
+        const password =
+            document.getElementById("password");
+
+        const button =
+            document.querySelector(".password-toggle");
+
+
+        if (password.type === "password") {
+
+            password.type = "text";
+
+            button.textContent = "◉";
+
+            button.setAttribute(
+                "aria-label",
+                "Hide password"
+            );
+
+        } else {
+
+            password.type = "password";
+
+            button.textContent = "◉";
+
+            button.setAttribute(
+                "aria-label",
+                "Show password"
+            );
+
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
