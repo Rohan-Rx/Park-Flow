@@ -37,12 +37,12 @@
        Documentation at /docs/jndi-resources-howto.html
   -->
   <GlobalNamingResources>
-    <!-- Editable user database that can also be used by
+    <!-- Editable user in.parkflow.database that can also be used by
          UserDatabaseRealm to authenticate users
     -->
     <Resource name="UserDatabase" auth="Container"
               type="org.apache.catalina.UserDatabase"
-              description="User database that can be updated and saved"
+              description="User in.parkflow.database that can be updated and saved"
               factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
               pathname="conf/tomcat-users.xml" />
   </GlobalNamingResources>
@@ -50,7 +50,7 @@
   <!-- A "Service" is a collection of one or more "Connectors" that share
        a single "Container" Note:  A "Service" is not itself a "Container",
        so you may not define subcomponents such as "Valves" at this level.
-       Documentation at /docs/config/service.html
+       Documentation at /docs/config/in.parkflow.service.html
    -->
   <Service name="Catalina">
 
