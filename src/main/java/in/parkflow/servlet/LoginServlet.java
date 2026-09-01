@@ -26,9 +26,9 @@ public class LoginServlet extends HttpServlet {
         }
 
         if(success){
-            resp.sendRedirect("dashboard.html");
+            resp.sendRedirect("dashboard.jsp");
         }else{
-            resp.sendRedirect("login.html?error=invalid");
+            resp.sendRedirect("index.html?error=invalid");
         }
 
     }
