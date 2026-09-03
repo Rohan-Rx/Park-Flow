@@ -1,4 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="in.parkflow.model.User" %>
+
+<%
+    User user = (User) session.getAttribute("user");
+
+    if (user == null) {
+        response.sendRedirect("index.html");
+        return;
+    }
+%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +62,7 @@
             Profile
         </a>
 
-        <a href="login.html"
+        <a href="logout"
            class="logout">
             Logout
         </a>
@@ -73,9 +83,13 @@
 
         <div>
 
-            <h1>
-                Welcome back, <span>Rohan</span> 👋
-            </h1>
+           <h1>
+               Welcome back, <%= user.getName() %> 👋
+           </h1>
+
+           <p>
+               <%= user.getEmail() %>
+           </p>
 
             <p>
                 Find and manage your parking spaces easily.
