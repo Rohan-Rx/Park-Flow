@@ -31,6 +31,34 @@ public class RegistrationServlet extends HttpServlet {
         String confirmPassword =
                 req.getParameter("confirmPassword");
 
+        if (name == null || email == null || phone == null) {
+            req.setAttribute("error", "Please fill in all required fields.");
+            req.getRequestDispatcher("/register.jsp")
+                    .forward(req, resp);
+            return;
+        }
+        email = email.trim().toLowerCase(java.util.Locale.ROOT);
+        phone = phone.trim();
+
+        String emailRegex =
+                "^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)+$";
+
+        String phoneRegex = "^[6-9][0-9]{9}$";
+
+        if (!email.matches(emailRegex)) {
+            req.setAttribute("error", "Please enter a valid email address.");
+            req.getRequestDispatcher("/register.jsp")
+                    .forward(req, resp);
+            return;
+        }
+
+        if (!phone.matches(phoneRegex)) {
+            req.setAttribute("error",
+                    "Enter a valid 10-digit Indian mobile number.");
+            req.getRequestDispatcher("/register.jsp")
+                    .forward(req, resp);
+            return;
+        }
 
 
         if (password == null ||
@@ -44,8 +72,6 @@ public class RegistrationServlet extends HttpServlet {
             return;
         }
 
-
-        // Create User object
         User user = new User(
                 name,
                 email,
@@ -59,7 +85,7 @@ public class RegistrationServlet extends HttpServlet {
 
             service.addRegistration(user);
 
-            resp.sendRedirect("index.html");
+            resp.sendRedirect("index.jsp");
 
         } catch (SQLException |
                  ClassNotFoundException e) {

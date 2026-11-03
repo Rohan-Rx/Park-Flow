@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBConnection {
     private static final String url="jdbc:mysql://localhost:3306/Parkflow";
     private static final String user="root";
-    private static final String password="Rohan@123";
+    private static final String password=System.getenv("DB_pass");
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
